@@ -1,4 +1,6 @@
-import "./App.scss";
+import { useFetchWeatherForCity } from '@/hooks';
+
+import './App.scss';
 
 // ----------------------------------------------------------------
 
@@ -11,6 +13,12 @@ import "./App.scss";
  */
 
 const App: React.FC = () => {
+  const { data, isLoading, error } = useFetchWeatherForCity('london');
+
+  console.log('data', data);
+  console.log('error', error);
+  console.log('isLoading', isLoading);
+
   return (
     <div>
       <h1>Weather Forecast</h1>
