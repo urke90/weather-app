@@ -1,5 +1,4 @@
-import styles from './LoadingSpinner.module.scss';
-
+import './LoadingSpinner.scss';
 // ----------------------------------------------------------------
 
 interface ILoadingSpinnerProps {
@@ -10,10 +9,8 @@ const LoadingSpinner: React.FC<ILoadingSpinnerProps> = ({
   fullscreen = false,
 }) => {
   return (
-    <div
-      className={`${styles['loader']} ${fullscreen ? styles['loader--fullscreen'] : ''}`}
-    >
-      <div className={styles['loader__lds-roller']}>
+    <div className={`loader ${fullscreen ? 'loader--fullscreen' : ''}`}>
+      <div className="loader__lds-roller">
         <div></div>
         <div></div>
         <div></div>

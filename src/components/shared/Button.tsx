@@ -1,5 +1,5 @@
 import { type HTMLAttributes } from 'react';
-import styles from './Button.module.scss';
+import './Button..scss';
 
 // ----------------------------------------------------------------
 
@@ -11,7 +11,7 @@ interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<IButtonProps> = ({ variant = 'primary', ...rest }) => {
   return (
     <button
-      className={`${variant === 'primary' ? styles['button--primary'] : styles['button--secondary']}`}
+      className={`btn ${variant === 'primary' ? 'btn--primary' : 'btn--secondary'}`}
       {...rest}
     />
   );
