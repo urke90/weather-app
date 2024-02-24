@@ -1,10 +1,13 @@
-.header {
-  // padding: 0 15px;
-  width: 100%;
-  border: 1px solid blue;
+@import '../../styles/variables';
 
+.header {
   &__container {
-    // border: 1px solid red;
+    max-width: $screen-max-width;
+    margin: 0 auto;
     padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $logo-text-color;
   }
 }

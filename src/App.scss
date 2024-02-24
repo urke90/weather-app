@@ -1,7 +1,11 @@
+@import './styles/variables';
+
 .app {
+  margin: 0 auto;
+  max-width: $screen-max-width;
+
   &__content {
-    max-width: 1280px;
     margin-top: 50px;
-    padding: 20px;
+    padding: 20px 40px;
   }
 }
