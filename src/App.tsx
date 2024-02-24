@@ -1,7 +1,5 @@
-import { useFetchWeatherForCity } from '@/hooks';
-import Button from './components/shared/Button';
-
-import LoadingSpinner from './components/ui/LoadingSpinner';
+import Home from '@/pages/Home/Home';
+import { Header } from '@/components';
 
 import './App.scss';
 
@@ -18,13 +16,12 @@ import './App.scss';
 const App: React.FC = () => {
   // const { data, isLoading, error } = useFetchWeatherForCity('london');
 
-  // console.log('data', data);
-  // console.log('error', error);
-  // console.log('isLoading', isLoading);
-
   return (
-    <div>
-      <h1>Weather Forecast</h1>
+    <div className="app">
+      <Header />
+      <main className="app__content">
+        <Home />
+      </main>
     </div>
   );
 };
