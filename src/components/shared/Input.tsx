@@ -1,4 +1,4 @@
-import { type InputHTMLAttributes } from 'react';
+import { forwardRef, type InputHTMLAttributes } from 'react';
 
 import './Input.scss';
 
@@ -6,8 +6,8 @@ import './Input.scss';
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-const Input: React.FC<IInputProps> = (props) => {
-  return <input className="input" {...props} />;
-};
+const Input = forwardRef<HTMLInputElement, IInputProps>((props, ref) => {
+  return <input ref={ref} className="input" {...props} />;
+});
 
 export default Input;

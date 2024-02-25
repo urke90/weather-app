@@ -8,8 +8,8 @@ interface TextIconProps {
 }
 
 const TextIcon: React.FC<TextIconProps> = ({
-  text,
-  icon,
+  text = '',
+  icon = '',
   additionalStyles,
 }) => {
   return (

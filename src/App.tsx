@@ -1,5 +1,6 @@
-import Home from '@/pages/Home/Home';
 import { Header } from '@/components';
+
+import { HomePage } from '@/pages';
 
 import './App.scss';
 
@@ -20,7 +21,7 @@ const App: React.FC = () => {
     <div className="app">
       <Header />
       <main className="app__content">
-        <Home />
+        <HomePage />
       </main>
     </div>
   );

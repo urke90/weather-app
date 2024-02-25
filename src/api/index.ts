@@ -1,2 +1,2 @@
-export * from './requests';
+export * from './axios';
 export * from './react-query-constants';
