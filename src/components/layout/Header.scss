@@ -1,13 +1,32 @@
-@import '../../styles/variables';
-
 .header {
   &__container {
     max-width: $screen-max-width;
+    color: $logo-text-color;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $logo-text-color;
+  }
+
+  &__logo {
+    display: flex;
+    font-size: 18px;
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    &__logo {
+      font-size: 26px;
+    }
+  }
+  @media (min-width: $breakpoint-tablet) {
+    &__logo {
+      font-size: 32px;
+    }
+  }
+  @media (min-width: $breakpoint-desktop) {
+    &__logo {
+      font-size: 40px;
+    }
   }
 }

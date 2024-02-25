@@ -16,4 +16,12 @@ export default defineConfig({
       '@/api': path.resolve(__dirname, 'src/api'),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // imported variables globally so they could be used across the app.
+        additionalData: `@import "./src/styles/_variables.scss";`,
+      },
+    },
+  },
 });

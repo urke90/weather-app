@@ -10,7 +10,7 @@ const Header: React.FC = () => {
       <div className="header__container">
         <h1 className="header__title">Weather Forcast App</h1>
         <div className="header__logo">
-          <MdSunnySnowing size={50} />
+          <MdSunnySnowing />
         </div>
       </div>
     </header>

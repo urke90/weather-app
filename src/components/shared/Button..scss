@@ -1,31 +1,36 @@
-@import '../../styles/variables';
-
 .btn {
-  padding: 10px 16px;
+  width: 100%;
   border-radius: $border-radius;
+  font-size: 12px;
+  padding: $input-padding-mobile;
   text-transform: uppercase;
   outline: none;
   transition: all 0.5s ease-out;
 
   &--primary {
-    background-color: $button-color-primary;
+    background-color: $input-color-primary;
     color: $color-white;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
 
     &:hover {
-      background-color: $button-color-primary-hover;
+      background-color: $input-color-primary-hover;
     }
   }
 
   &--secondary {
     background-color: transparent;
-    color: $button-color-secondary;
-    border: 2px solid $button-color-secondary;
+    color: $input-color-secondary;
+    border: 3px solid $input-color-secondary;
 
     &:hover {
       color: $color-white;
-      background-color: $button-color-secondary-hover;
-      border: 2px solid $button-color-secondary;
+      background-color: $input-color-primary;
+      border: 3px solid $input-color-primary;
     }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $input-padding-tablet;
+    font-size: $input-font-size-tablet;
   }
 }

@@ -6,24 +6,29 @@ $h3-color: #d5dce2;
 $color-white: #ffffff;
 $subtitle-color: #73828c;
 
-// button colors
-$button-color-primary: #1095c1;
-$button-color-primary-hover: #19b3e6;
+// input
+$input-color-primary: #1095c1;
+$input-color-primary-hover: #19b3e6;
 
-$button-color-secondary: #0f94c1;
-$button-color-secondary-hover: #19b3e6;
+$input-color-secondary: #0f94c1;
+$input-color-secondary-hover: #19b3e6;
+$input-padding-mobile: 8px 14px;
+$input-padding-tablet: 14px 20px;
+$input-font-size-mobile: 14px;
+$input-font-size-tablet: 16px;
 
 // border
 $border-color: #374956;
 $border-radius: 5px;
 
 // animation
-$tranistion: all 0.5 ease-out;
+$tranistion: all 0.5s ease-out;
 
 // screen
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 $screen-max-width: 1280px;
-
-// Here are the conversions from HSL to RGB and HEX for the specified colors:
 
 // --primary-hover: hsl(195, 80%, 50%)
 
