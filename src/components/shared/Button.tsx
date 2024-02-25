@@ -1,9 +1,9 @@
-import { type HTMLAttributes } from 'react';
+import { type ButtonHTMLAttributes } from 'react';
 import './Button..scss';
 
 // ----------------------------------------------------------------
 
-interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   // created so it can be further extended with different styles if needed
   variant?: 'primary' | 'secondary';
 }
