@@ -2,12 +2,12 @@
   width: 100%;
   background-color: #11191f;
   padding: $input-padding-mobile;
-  outline: none;
-  border: 3px solid $border-color;
   border-radius: $border-radius;
   font-size: $input-font-size-mobile;
   color: $text-color-primary;
   transition: $tranistion;
+  outline: none;
+  border: 3px solid $border-color;
 
   &::placeholder {
     font-size: $input-font-size-mobile;
