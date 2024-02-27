@@ -1,5 +1,4 @@
-.home {
-  border: 1px solid red;
+.weather {
   &__title {
     margin: 0;
   }
@@ -10,5 +9,8 @@
   &__search-form {
     margin: 30px 0 20px;
     display: flex;
+  }
+  &__content {
+    margin: 20px auto;
   }
 }

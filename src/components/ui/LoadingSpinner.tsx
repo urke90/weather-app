@@ -1,4 +1,5 @@
 import './LoadingSpinner.scss';
+
 // ----------------------------------------------------------------
 
 interface ILoadingSpinnerProps {

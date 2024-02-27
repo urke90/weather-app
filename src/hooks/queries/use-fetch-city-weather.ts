@@ -1,34 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
 import { axios, FETCH_CITY_WEATHER } from '@/api';
+import { type IWeatherData } from '@/types';
+import { type AxiosError } from 'axios';
 
 // ----------------------------------------------------------------
 
 const fetchCityWeather = async (cityName = '') => {
-  const url = `?q=${encodeURIComponent(cityName)}&appid=${import.meta.env.VITE_OPEN_WEATHER_API_KEY}`;
+  const url = `?q=${encodeURIComponent(cityName)}&appid=${import.meta.env.VITE_OPEN_WEATHER_API_KEY}&units=metric`;
 
   const { data } = await axios.get(url);
   return data;
-  // try {
-  // } catch (error) {
-  //   console.log('AAAAAAAAAA', error);
-
-  //   throw error;
-  // }
-  // console.log('response', response);
-
-  // return await axios.get(url);
 };
 
 export const useFetchCityWeather = (searchQuery: string) => {
-  const { isLoading, data, error } = useQuery({
+  return useQuery<IWeatherData, AxiosError>({
     queryKey: [FETCH_CITY_WEATHER, searchQuery],
     queryFn: () => fetchCityWeather(searchQuery),
     enabled: !!searchQuery,
+    refetchOnWindowFocus: false,
   });
-
-  return {
-    isLoading,
-    error,
-    data,
-  };
 };
