@@ -18,5 +18,6 @@ export const useFetchCityWeather = (searchQuery: string) => {
     queryFn: () => fetchCityWeather(searchQuery),
     enabled: !!searchQuery,
     refetchOnWindowFocus: false,
+    retry: false,
   });
 };

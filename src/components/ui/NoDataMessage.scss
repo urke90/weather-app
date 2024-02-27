@@ -1,3 +1,11 @@
 .no-data-message {
   @include display-messages;
+
+  &__icon {
+    font-size: 40px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
 }
