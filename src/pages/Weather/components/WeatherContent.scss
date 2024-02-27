@@ -22,14 +22,15 @@
   }
   &__temperature {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+
     border-bottom: 3px solid $border-color;
     padding: 5px;
   }
 
-  &__temperature-value {
-    font-size: 20px;
+  &__temperature-details {
+    display: flex;
+    align-items: center;
   }
 
   &__item-wrapper {

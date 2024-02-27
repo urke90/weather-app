@@ -2,8 +2,18 @@
   transition: $tranistion;
   transform: translateY(0);
 
+  &__text {
+    font-size: 14px;
+  }
+
   &:hover {
     color: $blue-color-secondary;
     transform: translateY(-3px);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    &__text {
+      font-size: 16px;
+    }
   }
 }

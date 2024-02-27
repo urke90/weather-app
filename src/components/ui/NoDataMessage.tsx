@@ -7,7 +7,8 @@ import './NoDataMessage.scss';
 const NoDataMessage: React.FC = () => {
   return (
     <div className="no-data-message">
-      <h4>No Data!</h4> <CgSmileSad />
+      <h4 className="no-data-message__title">No Data Available!</h4>
+      <CgSmileSad className="no-data-message__icon" />
     </div>
   );
 };

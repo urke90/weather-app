@@ -29,7 +29,7 @@ const Weather: React.FC = () => {
 
   return (
     <div className="weather">
-      <h2 className="weather__title">Search for City weather</h2>
+      <h2 className="weather__title">WeatherCheck: Choose Your City</h2>
       <h5 className="weather__subtitle">
         Enter city name below to get its current weather conditions
       </h5>

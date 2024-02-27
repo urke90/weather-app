@@ -36,13 +36,15 @@ const WeatherContent: React.FC<IWeatherContentProps> = ({ data }) => {
       <div className="weather-content__body">
         <div className="weather-content__body-details">
           <div className="weather-content__temperature">
-            <img
-              src={`https://openweathermap.org/img/wn/${icon}.png`}
-              alt={description}
-            />
-            <span className="weather-content__temperature-value">
-              {formatTemperature(temp)}
-            </span>
+            <div className="weather-content__temperature-details">
+              <img
+                src={`https://openweathermap.org/img/wn/${icon}.png`}
+                alt={description}
+              />
+              <span className="weather-content__temperature-value">
+                {formatTemperature(temp)}
+              </span>
+            </div>
             <span className="weather-content__details-description">
               {description} ~ Real Feel {formatTemperature(feels_like)}
             </span>
