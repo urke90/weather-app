@@ -12,20 +12,20 @@ import './Weather.scss';
 
 const Weather: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const searchCityInputRef = useInputFocus();
   const { data, error, isLoading, isError, isFetchedAfterMount } =
     useFetchCityWeather(searchQuery);
 
-  const handleSearchCityWeather = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (searchCityInputRef.current?.value.trim()) {
-      const query = searchCityInputRef.current.value.trim();
-      setSearchQuery(query);
+    if (inputValue.trim()) {
+      setSearchQuery(inputValue.trim());
     }
   };
 
-  console.log('searchCityInputRef', searchCityInputRef.current?.value);
+  const isBtnDisabled = !inputValue.trim() || isLoading;
 
   return (
     <div className="weather">
@@ -34,14 +34,15 @@ const Weather: React.FC = () => {
         Enter city name below to get its current weather conditions
       </h5>
       <div className="weather__search-form">
-        <SearchForm onSubmit={handleSearchCityWeather}>
+        <SearchForm onSubmit={handleSubmit}>
           <Input
             type="search"
             name="city"
             placeholder="Enter City Name"
             ref={searchCityInputRef}
+            onChange={(e) => setInputValue(e.target.value)}
           />
-          <Button type="submit">
+          <Button type="submit" disabled={isBtnDisabled} variant="secondary">
             <TextIcon text="Search" icon={<TbCloudSearch />} />
           </Button>
         </SearchForm>

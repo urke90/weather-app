@@ -1,3 +1,5 @@
+import './TextIcon.scss';
+
 // ----------------------------------------------------------------
 
 interface TextIconProps {
@@ -14,11 +16,8 @@ const TextIcon: React.FC<TextIconProps> = ({
 }) => {
   return (
     <div
+      className="text-icon"
       style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '5px',
         ...additionalStyles,
       }}
     >

@@ -1,7 +1,7 @@
+import { type AxiosError } from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { axios, FETCH_CITY_WEATHER } from '@/api';
 import { type IWeatherData } from '@/types';
-import { type AxiosError } from 'axios';
 
 // ----------------------------------------------------------------
 

@@ -9,13 +9,14 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
 }
 
-const Button: React.FC<IButtonProps> = ({ variant = 'primary', ...rest }) => {
-  return (
-    <button
-      className={`btn ${variant === 'primary' ? 'btn--primary' : 'btn--secondary'}`}
-      {...rest}
-    />
-  );
+const Button: React.FC<IButtonProps> = ({
+  variant = 'primary',
+  disabled,
+  ...rest
+}) => {
+  const btnClasses = `btn ${variant === 'primary' ? 'btn--primary' : 'btn--secondary'} ${disabled ? 'btn-disabled' : ''}`;
+
+  return <button className={btnClasses} disabled={disabled} {...rest} />;
 };
 
 export default Button;
