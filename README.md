@@ -19,7 +19,7 @@ Our Weather Forecast App leverages the latest technologies to ensure high perfor
 Install NPM packages:
 
 ```js
-npm install
+$ npm install
 ```
 
 Contributing
