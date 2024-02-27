@@ -7,12 +7,19 @@
   outline: none;
   transition: all 0.5s ease-out;
 
+  &:disabled {
+    background-color: $input-disabled;
+    border-color: $border-color;
+    color: $color-white;
+    cursor: not-allowed;
+  }
+
   &--primary {
     background-color: $blue-color-primary;
     color: $color-white;
     border: 3px solid transparent;
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: $blue-color-primary-hover;
     }
   }
@@ -22,7 +29,7 @@
     color: $blue-color-secondary;
     border: 3px solid $blue-color-secondary;
 
-    &:hover {
+    &:not(:disabled):hover {
       color: $color-white;
       background-color: $blue-color-primary;
       border: 3px solid $blue-color-primary;
