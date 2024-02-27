@@ -1,0 +1,9 @@
+.weather-item {
+  transition: $tranistion;
+  transform: translateY(0);
+
+  &:hover {
+    color: $blue-color-secondary;
+    transform: translateY(-3px);
+  }
+}

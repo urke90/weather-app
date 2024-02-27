@@ -8,24 +8,24 @@
   transition: all 0.5s ease-out;
 
   &--primary {
-    background-color: $input-color-primary;
+    background-color: $blue-color-primary;
     color: $color-white;
     border: 3px solid transparent;
 
     &:hover {
-      background-color: $input-color-primary-hover;
+      background-color: $blue-color-primary-hover;
     }
   }
 
   &--secondary {
     background-color: transparent;
-    color: $input-color-secondary;
-    border: 3px solid $input-color-secondary;
+    color: $blue-color-secondary;
+    border: 3px solid $blue-color-secondary;
 
     &:hover {
       color: $color-white;
-      background-color: $input-color-primary;
-      border: 3px solid $input-color-primary;
+      background-color: $blue-color-primary;
+      border: 3px solid $blue-color-primary;
     }
   }
 

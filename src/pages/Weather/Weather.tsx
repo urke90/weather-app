@@ -4,15 +4,17 @@ import { TbCloudSearch } from 'react-icons/tb';
 import { useInputFocus, useFetchCityWeather } from '@/hooks';
 // components
 import { Input, Button, SearchForm, TextIcon } from '@/components';
+import WeatherDataStatusRenderer from './components/WeatherDataStatusRenderer';
 
-import './Home.scss';
+import './Weather.scss';
 
 // ----------------------------------------------------------------
 
-const Home: React.FC = () => {
+const Weather: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const searchCityInputRef = useInputFocus();
-  // const { data, error, isLoading } = useFetchCityWeather(searchQuery);
+  const { data, error, isLoading, isError, isFetchedAfterMount } =
+    useFetchCityWeather(searchQuery);
 
   const handleSearchCityWeather = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,13 +25,15 @@ const Home: React.FC = () => {
     }
   };
 
+  console.log('searchCityInputRef', searchCityInputRef.current?.value);
+
   return (
-    <div className="home">
-      <h2 className="home__title">Search for City weather</h2>
-      <h5 className="home__subtitle">
-        Enter a city below to get its current weather conditions
+    <div className="weather">
+      <h2 className="weather__title">Search for City weather</h2>
+      <h5 className="weather__subtitle">
+        Enter city name below to get its current weather conditions
       </h5>
-      <div className="home__search-form">
+      <div className="weather__search-form">
         <SearchForm onSubmit={handleSearchCityWeather}>
           <Input
             type="search"
@@ -42,9 +46,18 @@ const Home: React.FC = () => {
           </Button>
         </SearchForm>
       </div>
-      <div>THIS WILL BE FOR DATA</div>
+
+      <div className="weather__content">
+        <WeatherDataStatusRenderer
+          isLoading={isLoading}
+          isError={isError}
+          isFetchedAfterMount={isFetchedAfterMount}
+          error={error}
+          data={data}
+        />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Weather;

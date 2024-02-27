@@ -14,16 +14,20 @@ export default defineConfig({
     alias: {
       '@/components': path.resolve(__dirname, 'src/components'),
       '@/pages': path.resolve(__dirname, 'src/pages'),
-      '@/lib': path.resolve(__dirname, 'src/lib'),
+      '@/types': path.resolve(__dirname, 'src/types'),
       '@/hooks': path.resolve(__dirname, 'src/hooks'),
       '@/api': path.resolve(__dirname, 'src/api'),
+      '@/utils': path.resolve(__dirname, 'src/utils'),
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
         // imported variables globally so they could be used across the app.
-        additionalData: `@import "./src/styles/_variables.scss";`,
+        additionalData: `
+          @import "./src/styles/_variables.scss";
+          @import "./src/styles/_mixins.scss";
+        `,
       },
     },
   },

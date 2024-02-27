@@ -1,6 +1,6 @@
 .input {
   width: 100%;
-  background-color: #11191f;
+  background-color: $black-color;
   padding: $input-padding-mobile;
   border-radius: $border-radius;
   font-size: $input-font-size-mobile;
@@ -14,7 +14,7 @@
   }
 
   &:focus {
-    border-color: $input-color-secondary;
+    border-color: $blue-color-secondary;
   }
 
   @media (min-width: $breakpoint-tablet) {

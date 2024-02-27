@@ -6,12 +6,13 @@ $h3-color: #d5dce2;
 $color-white: #ffffff;
 $subtitle-color: #73828c;
 
-// input
-$input-color-primary: #1095c1;
-$input-color-primary-hover: #19b3e6;
+$blue-color-primary: #1095c1;
+$blue-color-primary-hover: #19b3e6;
+$blue-color-secondary: #0f94c1;
+$blue-color-secondary-hover: #19b3e6;
+$black-color: #11191f;
 
-$input-color-secondary: #0f94c1;
-$input-color-secondary-hover: #19b3e6;
+// input
 $input-padding-mobile: 8px 14px;
 $input-padding-tablet: 14px 20px;
 $input-font-size-mobile: 14px;
@@ -29,24 +30,3 @@ $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $screen-max-width: 1280px;
-
-// --primary-hover: hsl(195, 80%, 50%)
-
-// RGB: (25, 179, 230)
-// HEX: #19b3e6
-// --color: hsl(205, 16%, 77%)
-
-// RGB: (187, 198, 206)
-// HEX: #bbc6ce
-// --primary: hsl(195, 85%, 41%)
-
-// RGB: (16, 149, 193)
-// HEX: #1095c1
-// --h3-color: hsl(205, 18%, 86%)
-
-// RGB: (213, 220, 226)
-// HEX: #d5dce2
-// --muted-color: hsl(205, 10%, 50%)
-
-// RGB: (115, 130, 140)
-// HEX: #73828c

@@ -1,0 +1,11 @@
+@mixin display-messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+  }
+}
