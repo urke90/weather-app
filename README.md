@@ -6,33 +6,48 @@ Welcome to the Weather Forecast App, a sleek and modern web application designed
 
 Our Weather Forecast App leverages the latest technologies to ensure high performance and scalability:
 
-**React**: A powerful library for building user interfaces.
-**Vite**: An incredibly fast frontend build tool.
-**Axios**: Promise based HTTP client for the browser and node.js.
-**@tanstack/react-query**: Robust, powerful, and easy-to-use fetching library.
-**TypeScript**: Adds static types to JavaScript, enhancing development and maintenance.
-**Sass**: A preprocessor scripting language that is interpreted or compiled into CSS.
+**React**: A powerful library for building user interfaces.  
+**Vite**: An incredibly fast frontend build tool.  
+**Axios**: Promise based HTTP client for the browser and node.js.  
+**@tanstack/react-query**: Robust, powerful, and easy-to-use fetching library.  
+**TypeScript**: Adds static types to JavaScript, enhancing development and maintenance.  
+**Sass**: A preprocessor scripting language that is interpreted or compiled into CSS.  
 **ESLint & Prettier**: Ensures code quality and consistency.
 
-# Installation and Usage
+## Installation and Usage
 
-Install NPM packages:
+1. Install dependencies using NPM or Yarn:
+
+**Using NPM**
 
 ```js
 $ npm install
 ```
 
-Contributing
-We welcome contributions to make this app even better! If you have suggestions or improvements, feel free to fork the repo and create a pull request, or open an issue with the tag "enhancement".
+**Using Yarn**
 
-Don't forget to give the project a star if you found it helpful!
+```js
+yarn install
+```
+
+2. Start the development server:
+
+**Using NPM**
+
+```js
+npm run dev
+```
+
+**Using Yarn**
+
+```js
+yarn run dev
+```
+
+Head over to **http://localhost:3000** to see the app in action.
 
 License
 Distributed under the MIT License. See LICENSE for more information.
 
 Contact
-Your Name - @your-twitter
-
-Project Link: https://github.com/your-username/weather-forecast
-
-This introduction aims to provide a concise overview of your project, its features, technologies used, and how to get started. Modify it as needed to better suit your project's needs or personal preferences.
+Your Name - [Uroš Bijelić](https://www.linkedin.com/in/uros-bijelic-151a36245/)
