@@ -16,7 +16,7 @@ Our Weather Forecast App leverages the latest technologies to ensure high perfor
 
 ## Installation and Usage
 
-1. Install dependencies using NPM or Yarn:
+Install dependencies using NPM or Yarn:
 
 **Using NPM**
 
@@ -30,7 +30,7 @@ $ npm install
 yarn install
 ```
 
-2. Start the development server:
+Start the development server:
 
 **Using NPM**
 
@@ -45,6 +45,10 @@ yarn run dev
 ```
 
 Head over to **http://localhost:3000** to see the app in action.
+
+## Message to the code reviewer
+
+Although the application is fairly small and does not require a complex structure, I have anticipated what it might look like on a larger project. Therefore, I have created a more complex application structure than necessary.
 
 License
 Distributed under the MIT License. See LICENSE for more information.
